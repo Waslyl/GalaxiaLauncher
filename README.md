@@ -1,5 +1,7 @@
 # Welcome to GitHub Desktop!
 
-This is your README. READMEs are where you can communicate what your project is and how to use it.
+New launcher of Galaxia for new developer.
+You can learn to create a launcher with this one (used for GalaxiaFN).
 
-Write your name on line 6, save it, and then head back to GitHub Desktop.
+If you want to use it for your server, ask me before by discord: Waslyl.
+
