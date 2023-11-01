@@ -1,0 +1,627 @@
+﻿<Window x:Class="UIKitTutorials.Pages.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UIKitTutorials.Pages"
+        mc:Ignorable="d"
+        Title="Galaxia" Height="660" Width="1025" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Background="Black" ShowInTaskbar="True" Icon="/Pages/Galaxia.png" WindowStyle="None" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border BorderThickness="3" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" Background="{TemplateBinding Background}" CornerRadius="6" BorderBrush="MediumPurple">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ScrollThumbs" TargetType="{x:Type Thumb}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Grid x:Name="Grid">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="43*"/>
+                                <RowDefinition Height="47*"/>
+                            </Grid.RowDefinitions>
+                            <Rectangle Width="Auto" 
+                                           Height="Auto" Fill="Transparent" Grid.RowSpan="2"/>
+                            <Border x:Name="Rectangle1" CornerRadius="3" Width="Auto" Height="Auto" 
+                                        Background="{TemplateBinding Background}" Margin="3,3,0,42" Grid.RowSpan="2"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="Tag" Value="Horizontal">
+                                <Setter TargetName="Rectangle1" Property="Width" Value="Auto"/>
+                                <Setter TargetName="Rectangle1" Property="Height" Value="7"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="{x:Type ScrollBar}" TargetType="{x:Type ScrollBar}">
+            <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+            <Setter Property="Foreground" Value="#33FFFFFF"/>
+            <Setter Property="Background" Value="DarkGray"/>
+            <Setter Property="Width" Value="10"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ScrollBar}">
+                        <Grid x:Name="GridRoot" Width="12" Background="{x:Null}">
+                            <Track x:Name="PART_Track" Grid.Row="0" IsDirectionReversed="true" Focusable="False" Margin="-1,0,0,0">
+                                <Track.Thumb>
+                                    <Thumb x:Name="Thumb" Background="{TemplateBinding Foreground}" 
+                                               Style="{DynamicResource ScrollThumbs}" Height="93" Width="10" Foreground="White"/>
+                                </Track.Thumb>
+                                <Track.IncreaseRepeatButton>
+                                    <RepeatButton x:Name="PageUp" Command="ScrollBar.PageDownCommand" Opacity="0" Focusable="False"/>
+                                </Track.IncreaseRepeatButton>
+                                <Track.DecreaseRepeatButton>
+                                    <RepeatButton x:Name="PageDown" Command="ScrollBar.PageUpCommand" Opacity="0" Focusable="False"/>
+                                </Track.DecreaseRepeatButton>
+                            </Track>
+                        </Grid>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger SourceName="Thumb" Property="IsMouseOver" Value="true">
+
+                            </Trigger>
+                            <Trigger SourceName="Thumb" Property="IsDragging" Value="true">
+
+                            </Trigger>
+
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter TargetName="Thumb" Property="Visibility" Value="Collapsed"/>
+                            </Trigger>
+                            <Trigger Property="Orientation" Value="Horizontal">
+                                <Setter TargetName="GridRoot" Property="LayoutTransform">
+                                    <Setter.Value>
+                                        <RotateTransform Angle="-90"/>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter TargetName="PART_Track" Property="LayoutTransform">
+                                    <Setter.Value>
+                                        <RotateTransform Angle="-90"/>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Property="Width" Value="Auto"/>
+                                <Setter Property="Height" Value="12"/>
+                                <Setter TargetName="Thumb" Property="Tag" Value="Horizontal"/>
+                                <Setter TargetName="PageDown" Property="Command" Value="ScrollBar.PageLeftCommand"/>
+                                <Setter TargetName="PageUp" Property="Command" Value="ScrollBar.PageRightCommand"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="RoundedLabelForButton" TargetType="{x:Type Label}">
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Top"/>
+            <Setter Property="Template">
+
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Label}">
+                        <Border CornerRadius="15" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="true">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+
+
+
+                        <ControlTemplate.Triggers>
+
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation
+                                            Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
+                                            To="1.05" Duration="0:0:0:0.2">
+                                                <DoubleAnimation.EasingFunction>
+                                                    <QuadraticEase EasingMode="EaseOut"/>
+                                                </DoubleAnimation.EasingFunction>
+                                            </DoubleAnimation>
+                                            <DoubleAnimation
+                                            Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"
+                                            To="1.05" Duration="0:0:0:0.2">
+                                                <DoubleAnimation.EasingFunction>
+                                                    <QuadraticEase EasingMode="EaseOut"/>
+                                                </DoubleAnimation.EasingFunction>
+                                            </DoubleAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+                                <Trigger.ExitActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation
+                                            Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
+                                            To="1" Duration="0:0:0:0.2">
+                                                <DoubleAnimation.EasingFunction>
+                                                    <QuadraticEase EasingMode="EaseOut"/>
+                                                </DoubleAnimation.EasingFunction>
+                                            </DoubleAnimation>
+                                            <DoubleAnimation
+                                            Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"
+                                            To="1" Duration="0:0:0:0.2">
+                                                <DoubleAnimation.EasingFunction>
+                                                    <QuadraticEase EasingMode="EaseOut"/>
+                                                </DoubleAnimation.EasingFunction>
+                                            </DoubleAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.ExitActions>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+
+
+
+
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="RoundedTextBox" TargetType="{x:Type TextBox}">
+            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="AllowDrop" Value="true"/>
+            <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+            <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border CornerRadius="10" x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Opacity" TargetName="border" Value="0.56"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsInactiveSelectionHighlightEnabled" Value="true"/>
+                        <Condition Property="IsSelectionActive" Value="false"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="SelectionBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
+        <ControlTemplate TargetType="CheckBox" x:Key="CbTemplate">
+            <Border Name="BorderCB" CornerRadius="10" BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    Background="Gray"
+                    Height="{TemplateBinding Height}"
+                    Width="{TemplateBinding Width}" MinWidth="40" MinHeight="20">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="9*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="9*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Ellipse Name="SliderCB" Grid.Column="0" Height="{TemplateBinding Height}" Fill="White" Margin="0 0 20 0" Grid.ColumnSpan="3"></Ellipse>
+                </Grid>
+            </Border>
+            <ControlTemplate.Triggers>
+                <EventTrigger RoutedEvent="CheckBox.Checked">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard >
+                                <ThicknessAnimationUsingKeyFrames Storyboard.TargetName="SliderCB" Storyboard.TargetProperty="Margin" BeginTime="00:00:00">
+                                    <SplineThicknessKeyFrame KeyTime="00:00:00" Value="0, 0,20,0" />
+                                    <SplineThicknessKeyFrame KeyTime="00:00:00.4" Value="0, 0,5,0" />
+                                    <SplineThicknessKeyFrame KeyTime="00:00:00.6" Value="20, 0,0,0" />
+                                </ThicknessAnimationUsingKeyFrames>
+                                <ColorAnimation Storyboard.TargetName="BorderCB" Storyboard.TargetProperty="Background.Color" To="#FF5353B2" Duration="0:0:0.6"></ColorAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="CheckBox.Unchecked">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ThicknessAnimationUsingKeyFrames Storyboard.TargetName="SliderCB" Storyboard.TargetProperty="Margin" BeginTime="00:00:00">
+                                <SplineThicknessKeyFrame KeyTime="00:00:00" Value="20, 0,0,0" />
+                                <SplineThicknessKeyFrame KeyTime="00:00:00.1" Value="0, 0,5,0" />
+                                <SplineThicknessKeyFrame KeyTime="00:00:00.3" Value="0, 0,20,0" />
+                            </ThicknessAnimationUsingKeyFrames>
+                            <ColorAnimation Storyboard.TargetName="BorderCB" Storyboard.TargetProperty="Background.Color" Duration="0:0:0.3"></ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <ControlTemplate x:Key="RoundLabelFR" TargetType="{x:Type Label}">
+            <Border CornerRadius="25" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="true">
+                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled" Value="false">
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3"/>
+        <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>
+        <SolidColorBrush x:Key="TextBox.Focus.Border" Color="#FF569DE5"/>
+        <Style x:Key="ExchangeBoxStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource TextBox.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="AllowDrop" Value="true"/>
+            <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+            <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Opacity" TargetName="border" Value="0.56"/>
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsInactiveSelectionHighlightEnabled" Value="true"/>
+                        <Condition Property="IsSelectionActive" Value="false"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="SelectionBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
+        <SolidColorBrush x:Key="TextBox.Static.Border1" Color="#FFABAdB3"/>
+        <SolidColorBrush x:Key="TextBox.MouseOver.Border1" Color="#FF7EB4EA"/>
+        <SolidColorBrush x:Key="TextBox.Focus.Border1" Color="#FF569DE5"/>
+        <Style x:Key="TextBoxStyle1" TargetType="{x:Type TextBox}">
+            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource TextBox.Static.Border1}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="AllowDrop" Value="true"/>
+            <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+            <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border CornerRadius="10" x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Opacity" TargetName="border" Value="0.56"/>
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsInactiveSelectionHighlightEnabled" Value="true"/>
+                        <Condition Property="IsSelectionActive" Value="false"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="SelectionBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
+
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="522*"/>
+            <ColumnDefinition Width="503*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border x:Name="MainBorder" Grid.ColumnSpan="2">
+            <Grid Background="#1a1c1e">
+                <Grid x:Name="HomeMain" Background="#14141a">
+
+                    <Border x:Name="PatchNotesBorder" BorderThickness="1,1,1,1" CornerRadius="10" Background="#FF262631" Margin="19,73,19,478"  BorderBrush="#00000000">
+
+                        <Grid>
+                            <Label Content="GalaxiaFN!" FontWeight="Normal" FontFamily="Neue Haas Grotesk Display Pro" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" FontSize="18" Foreground="White" HorizontalAlignment="Left" Width="814" Margin="114,10,0,13"/>
+                            <Label x:Name="LabelPatch1" Content="Pour plus de mise à jour, aller dans le salon Patch note pour tous savoir! Passer du bon temps sur Galaxia!" FontWeight="Normal" FontFamily="Neue Haas Grotesk Display Pro" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" Foreground="#FFC9C9C9" HorizontalAlignment="Left" Width="814" Margin="113,28,0,3"/>
+                            <Border Margin="8,0,875,0" Opacity="0">
+                                <Border.Effect>
+                                    <DropShadowEffect Color="White" Opacity="0.2" BlurRadius="50" Direction="300"/>
+                                </Border.Effect>
+                                <Border.Background>
+                                    <ImageBrush ImageSource="/Pages/Galaxia.png" Stretch="UniformToFill" RenderOptions.BitmapScalingMode="HighQuality"/>
+                                </Border.Background>
+                            </Border>
+                            <Border Margin="20,0,887,0">
+                                <Border.Effect>
+                                    <DropShadowEffect Color="White" Opacity="0.2" BlurRadius="50" Direction="300"/>
+                                </Border.Effect>
+                                <Border.Background>
+                                    <ImageBrush ImageSource="/Pages/Galaxia.png" Stretch="Uniform" RenderOptions.BitmapScalingMode="HighQuality"/>
+                                </Border.Background>
+                            </Border>
+                            <Label x:Name="LabelPatch1_Copy" Content="Bienvenue sur Galaxia! Voici notre nouveau launcher." FontWeight="Normal" FontFamily="Neue Haas Grotesk Display Pro" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" Foreground="#FFC9C9C9" HorizontalAlignment="Left" Width="814" Margin="114,20,0,17"/>
+
+                        </Grid>
+                    </Border>
+
+                    <Border x:Name="Szn7ImgMaster" CornerRadius="10, 10, 10, 10" Margin="19,163,19,87" ClipToBounds="True">
+                        <Grid>
+                            <Border x:Name="Szn7Img" CornerRadius="10" Margin="0,0,0,0">
+                                <Border x:Name="Szn7ImgTransformBorder" CornerRadius="10" BorderThickness="0"
+                    RenderTransformOrigin="0.5,0.5" ClipToBounds="True" Margin="0,18,0,0">
+                                    <Border.Background>
+                                        <ImageBrush Stretch="UniformToFill" ImageSource="/Pages/s7.png"/>
+                                    </Border.Background>
+                                    <Border.RenderTransform>
+                                        <ScaleTransform x:Name="Szn7ImgScaleTransform" ScaleX="1" ScaleY="1"/>
+                                    </Border.RenderTransform>
+                                    <Border.Triggers>
+                                        <EventTrigger RoutedEvent="Border.MouseEnter">
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <DoubleAnimation Storyboard.TargetName="Szn7ImgScaleTransform"
+                                                 Storyboard.TargetProperty="ScaleX"
+                                                 To="1.02" Duration="0:0:0.15"/>
+                                                    <DoubleAnimation Storyboard.TargetName="Szn7ImgScaleTransform"
+                                                 Storyboard.TargetProperty="ScaleY"
+                                                 To="1.02" Duration="0:0:0.15"/>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+                                        <EventTrigger RoutedEvent="Border.MouseLeave">
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <DoubleAnimation Storyboard.TargetName="Szn7ImgScaleTransform"
+                                                 Storyboard.TargetProperty="ScaleX"
+                                                 To="1" Duration="0:0:0.3"/>
+                                                    <DoubleAnimation Storyboard.TargetName="Szn7ImgScaleTransform"
+                                                 Storyboard.TargetProperty="ScaleY"
+                                                 To="1" Duration="0:0:0.3"/>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+                                    </Border.Triggers>
+                                </Border>
+                            </Border>
+                        </Grid>
+                    </Border>
+
+
+                    <Grid>
+
+                    </Grid>
+                    <Border x:Name="HomeTextAnimBox" Margin="25,431,25,78">
+
+                        <Grid>
+                            <Border x:Name="OpaqueInfoBorderMain" Margin="-5.5,0,-6,-34">
+                                <Grid>
+
+                                    <Border CornerRadius="0, 0, 10, 10" Margin="-0.5,0,0,42" Background="#BF000000"/>
+                                    <ScrollViewer Margin="163,4,6,47" Cursor="Arrow">
+                                        <Grid Height="155" Width="775" FlowDirection="LeftToRight">
+                                            <Label x:Name="LabelScroll1" Content="Bienvenue sur Galaxia!" FontWeight="Normal" FontFamily="Neue Haas Grotesk Display Pro" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" FontSize="13" Foreground="#FFAAAAAA" HorizontalAlignment="Left" Width="927" Margin="8,3,0,115">
+
+                                            </Label>
+                                            <Label x:Name="LabelScroll2" Content="Préparez-vous à plonger dans une aventure palpitante ou chaque nouvelle partie est une nouvelle opportunité de briller " FontWeight="Normal" FontFamily="Neue Haas Grotesk Display Pro" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" FontSize="13" Foreground="#FFAAAAAA" HorizontalAlignment="Left" Width="920" Margin="8,35,0,93"/>
+                                            <Label x:Name="LabelScroll3" Content="et de s’épanouir sur la saison 7 du jeu." FontWeight="Normal" FontFamily="Neue Haas Grotesk Display Pro" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" FontSize="13" Foreground="#FFAAAAAA" HorizontalAlignment="Left" Width="920" Margin="8,-78,0,77"></Label>
+                                            <TextBlock x:Name="LabelScroll4" TextDecorations="Underline" Margin="10,78,3,-12" Foreground="#FFB9B9B9" FontFamily="Neue Haas Grotesk Display Pro XThin" FontSize="15">La saison actuelle de Galaxia est la Saison 7.20.</TextBlock>
+                                            <Label x:Name="LabelScroll5" Content="GalaxiaFN 2023,  - Public Release 4.0" FontWeight="Normal" FontFamily="Neue Haas Grotesk Display Pro" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" FontSize="13" Foreground="#FFAAAAAA" HorizontalAlignment="Left" Width="920" Margin="8,35,0,18"/>
+                                        </Grid>
+                                    </ScrollViewer>
+                                    <Border CornerRadius="0, 0, 0, 10" Margin="0,0,824,42" Background="#3F000000"/>
+                                    <Label x:Name="ARES_BigTextMainScreen" Content="GalaxiaFN" FontWeight="Bold" FontFamily="Neue Haas Grotesk Display Pro" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" Foreground="White" HorizontalAlignment="Left" Width="149" Margin="14,0,0,0" VerticalAlignment="Top" Height="72"/>
+
+                                    <Label x:Name="BUILDNMBR_BigTextMainScreen" Content="Battle Royale" FontWeight="Normal" FontFamily="Neue Haas Grotesk Display Pro" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="14" Foreground="#FFB9B9B9" HorizontalAlignment="Left" Width="149" Margin="0,53.3,0,13"/>
+                                    <Label x:Name="BUILDNMBR_BigTextMainScreen_Copy" Content="Saison 7" FontWeight="Normal" FontFamily="Neue Haas Grotesk Display Pro" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" Foreground="#B2B9B9B9" HorizontalAlignment="Left" Width="149" Margin="0,72,0,13" FontSize="11" FontStyle="Italic"/>
+
+
+
+                                </Grid>
+                            </Border>
+
+
+
+
+
+
+
+                        </Grid>
+
+                    </Border>
+                    <Border CornerRadius="10" Margin="20,163,981,135">
+                        <Grid/>
+                    </Border>
+
+
+
+                </Grid>
+                <Grid Background="#FF262631" Margin="0,0,0,579">
+
+                    <Label Content="                     ______________________________________" FontWeight="Normal" FontFamily="Neue Haas Grotesk Display Pro" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontSize="15" HorizontalAlignment="Right" Width="408" Margin="0,-11,-15,0" RenderTransformOrigin="0.5,0.5" Foreground="#FF00B5FF">
+                        <Label.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="1"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Label.RenderTransform>
+                    </Label>
+
+                    <Grid Margin="331,0,59,0">
+                        <Button x:Name="serveur" Background="#0FFFFFFF" Margin="127,5,438,10" Click="server_Click">
+
+
+                            <!-- Rest of your code -->
+                            <Label x:Name="HomeButton" Content="" FontWeight="Normal" FontFamily="Neue Haas Grotesk Display Pro" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Foreground="#FFC3C3C3" HorizontalAlignment="Center" Width="36" VerticalAlignment="Center" Height="24">
+                                <Label.Background>
+                                    <ImageBrush ImageSource="/Images/ic_wifi_tethering_white_48dp.png" Stretch="Uniform"/>
+                                </Label.Background>
+                            </Label>
+                            <!-- End of your code -->
+                        </Button>
+
+                        <Border CornerRadius="15" Margin="28,4,846,9" Background="#00111115" BorderBrush="#00000000" BorderThickness="1">
+                            <Grid Margin="0,-1,0,-6">
+
+
+                            </Grid>
+
+
+                        </Border>
+                        <Button x:Name="shop" Background="#0FFFFFFF" Margin="202,6,365,10" Click="shop_Click">
+                            <Label x:Name="SettingsButton2" Content="" FontWeight="Normal" FontFamily="Neue Haas Grotesk Display Pro" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Foreground="#FFC3C3C3" HorizontalAlignment="Center" Width="49" VerticalAlignment="Center" Height="25">
+                                <Label.Background>
+                                    <ImageBrush ImageSource="/Images/ic_local_grocery_store_white_48dp.png" Stretch="Uniform"/>
+                                </Label.Background>
+                            </Label>
+
+                        </Button>
+                        <Button x:Name="home_Copy"  Background="#0FFFFFFF" Margin="52,4,513,11">
+
+                            <!-- End of your code -->
+                            <!-- Rest of your code -->
+                            <Label x:Name="HomeButton1" Content="" FontWeight="Normal" FontFamily="Neue Haas Grotesk Display Pro" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Foreground="#FFC3C3C3" HorizontalAlignment="Center" Width="36" VerticalAlignment="Center" Height="24" Cursor="Hand">
+                                <Label.Background>
+                                    <ImageBrush ImageSource="/Images/ic_home_white_48dp.png" Stretch="Uniform"/>
+                                </Label.Background>
+                            </Label>
+                        </Button>
+                        <Button x:Name="SettingsBtn" Background="#0FFFFFFF" Margin="275,6,292,10" Click="SettingsBtn_Click" Foreground="#FF00B5FF">
+                            <Label x:Name="SettingsButton1" Content="" FontWeight="Normal" FontFamily="Neue Haas Grotesk Display Pro" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Foreground="#FFC3C3C3" HorizontalAlignment="Center" Width="49" VerticalAlignment="Center" Height="25" Cursor="Hand">
+                                <Label.Background>
+                                    <ImageBrush ImageSource="/Images/ic_settings_white_48dp.png" Stretch="Uniform"/>
+                                </Label.Background>
+                            </Label>
+                        </Button>
+                        <Button x:Name="SettingsBtn_Copy" Background="#0FFFFFFF" Margin="640,148,-34,-96" Click="ModEditBtn_Click" Foreground="#FF00B5FF">
+                            <Label x:Name="SettingsButton3" Content="edit" FontWeight="Normal" FontFamily="Neue Haas Grotesk Display Pro" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="10" Foreground="#FFC3C3C3" HorizontalAlignment="Center" Width="49" VerticalAlignment="Center" Height="60" Cursor="Hand" Background="{x:Null}"/>
+                        </Button>
+                        <Button x:Name="SettingsBtn_Copy1" Background="#0FFFFFFF" Margin="582,148,0,-96" Click="ModCrashBtn_Click" Foreground="#FF00B5FF">
+                            <Label x:Name="SettingsButton4" Content="anticrash" FontWeight="Normal" FontFamily="Neue Haas Grotesk Display Pro" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="10" Foreground="#FFC3C3C3" HorizontalAlignment="Center" Width="49" VerticalAlignment="Center" Height="60" Cursor="Hand" Background="{x:Null}"/>
+                        </Button>
+
+                    </Grid>
+
+                </Grid>
+                <Grid>
+                    <Label Content="                     ______________________________________" FontWeight="Normal" FontFamily="Neue Haas Grotesk Display Pro" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontSize="15" HorizontalAlignment="Right" Width="340" Margin="0,-11,684,568" RenderTransformOrigin="0.5,0.5" Foreground="#FF00B5FF">
+                        <Label.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="1"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Label.RenderTransform>
+                    </Label>
+                </Grid>
+                <Border x:Name="DownloadGradiant" BorderThickness="1" CornerRadius="10" Margin="19,553,320,17"  Cursor="Hand" BorderBrush="#FF00B5FF">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                            <GradientStop Color="#FF15151A"/>
+                            <GradientStop Color="#FF13131A" Offset="0.993"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Grid>
+                        <Label x:Name="Note" Content="Note!" FontWeight="Bold" FontFamily="Neue Haas Grotesk Display Pro" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="15" Foreground="White" HorizontalAlignment="Left" Width="125" Margin="-22,-23,0,23"/>
+                        <Label x:Name="Notice" Content="Nouvelle saison sur GalaxiaFN!" FontWeight="Normal" FontFamily="Neue Haas Grotesk Display Pro" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontSize="15" Foreground="#FFB4B4B4" HorizontalAlignment="Left" Width="245" Margin="74,0,0,47"/>
+                        <Label x:Name="Note2" Content="Achat du Battle Pass activé" FontWeight="Normal" FontFamily="Neue Haas Grotesk Display Pro" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontSize="15" Foreground="#FFB4B4B4" HorizontalAlignment="Left" Width="245" Margin="74,25,0,23"/>
+                        <Button  Margin="324,10,221,10" Background="#0CFFFFFF" Click="Button_Click">
+                            <Label x:Name="BuildNMBRNotice" Content="Saison 7.20" FontWeight="Bold" FontFamily="Source Code Pro SemiBold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" HorizontalAlignment="Center" Width="149" Margin="0,4,0,0" VerticalAlignment="Center"/>
+                        </Button>
+                        <Label x:Name="NoticeLine" Content="________________________________________________" FontWeight="Normal" FontFamily="Neue Haas Grotesk Display Pro" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontSize="15" HorizontalAlignment="Left" Width="132" Margin="521,-11,0,0" RenderTransformOrigin="0.5,0.5" Foreground="#FF00B5FF">
+                            <Label.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleX="1"/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Label.RenderTransform>
+                        </Label>
+
+
+                    </Grid>
+                </Border>
+
+                <Border x:Name="LaunchBTN" BorderThickness="1"  CornerRadius="10" Margin="710,553,19,17" Background="Black" Cursor="Hand" BorderBrush="#FF00B5FF">
+                    <Border.Resources>
+                        <Storyboard x:Key="LaunchBTNHoverAnimation">
+                            <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                            From="White"
+                            To="#D3D3D3"
+                            Duration="0:0:0.3"/>
+                        </Storyboard>
+                    </Border.Resources>
+                    <Grid>
+
+                        <Button x:Name="LaunchLabelLOADING" Content="Sauter du bus" FontWeight="Normal" FontFamily="Neue Haas Grotesk Display Pro" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Foreground="White" Background="#FF13131A" Click="LaunchLabelLOADING_Click" BorderBrush="#FF00A3FF">
+                            <Button.RenderTransform>
+                                <ScaleTransform x:Name="ScaleTransform2" ScaleX="1" ScaleY="1" />
+                            </Button.RenderTransform>
+                        </Button>
+                    </Grid>
+
+
+                </Border>
+
+            </Grid>
+        </Border>
+        <Border x:Name="SettingsBorder" Margin="1862,-103,-2384,180" Grid.Column="1" CornerRadius="8"/>
+        <StackPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,10,0" Height="40" Orientation="Horizontal" FlowDirection="RightToLeft">
+            <Button x:Name="btnClose" Style="{StaticResource IconButtonsStyle}" Content="{DynamicResource close}" Click="btnClose_Click" Tag="IsCloseButton" BorderBrush="White"/>
+            <Button x:Name="btnRestore" Margin="5,0" Click="btnRestore_Click">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource IconButtonsStyle}">
+                        <Setter Property="Content" Value="{DynamicResource maximize}"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding WindowState, ElementName=home}" Value="Maximized">
+                                <Setter Property="Content" Value="{DynamicResource restore}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Button x:Name="btnMinimize" Style="{DynamicResource IconButtonsStyle}" Content="{DynamicResource minimize}" Click="btnMinimize_Click"/>
+        </StackPanel>
+
+    </Grid>
+
+</Window>

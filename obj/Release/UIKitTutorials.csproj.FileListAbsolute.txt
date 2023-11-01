@@ -1,0 +1,201 @@
+C:\Users\delis\Downloads\UIKitTutorials-main\obj\Release\UIKitTutorials.csproj.AssemblyReference.cache
+C:\Users\delis\Downloads\UIKitTutorials-main\obj\Release\UIKitTutorials.csproj.SuggestedBindingRedirects.cache
+C:\Users\delis\Downloads\UIKitTutorials-main\obj\Release\MainWindow.g.cs
+C:\Users\delis\Downloads\UIKitTutorials-main\obj\Release\Pages\HomePage.g.cs
+C:\Users\delis\Downloads\UIKitTutorials-main\obj\Release\Pages\NotesPage.g.cs
+C:\Users\delis\Downloads\UIKitTutorials-main\obj\Release\Pages\PaymentPage.g.cs
+C:\Users\delis\Downloads\UIKitTutorials-main\obj\Release\Pages\SoundsPage.g.cs
+C:\Users\delis\Downloads\UIKitTutorials-main\obj\Release\App.g.cs
+C:\Users\delis\Downloads\UIKitTutorials-main\obj\Release\App.baml
+C:\Users\delis\Downloads\UIKitTutorials-main\obj\Release\Assets\Icons\Icons.baml
+C:\Users\delis\Downloads\UIKitTutorials-main\obj\Release\MainWindow.baml
+C:\Users\delis\Downloads\UIKitTutorials-main\obj\Release\Pages\HomePage.baml
+C:\Users\delis\Downloads\UIKitTutorials-main\obj\Release\Pages\NotesPage.baml
+C:\Users\delis\Downloads\UIKitTutorials-main\obj\Release\Pages\PaymentPage.baml
+C:\Users\delis\Downloads\UIKitTutorials-main\obj\Release\Pages\SoundsPage.baml
+C:\Users\delis\Downloads\UIKitTutorials-main\obj\Release\Styles\MainStyle.baml
+C:\Users\delis\Downloads\UIKitTutorials-main\obj\Release\Themes\LightTheme.baml
+C:\Users\delis\Downloads\UIKitTutorials-main\obj\Release\UIKitTutorials.Properties.Resources.resources
+C:\Users\delis\Downloads\UIKitTutorials-main\obj\Release\UIKitTutorials.csproj.GenerateResource.cache
+C:\Users\delis\Downloads\UIKitTutorials-main\obj\Release\UIKitTutorials.csproj.CoreCompileInputs.cache
+C:\Users\delis\Downloads\UIKitTutorials-main\bin\Release\Galaxia Launcher.exe.config
+C:\Users\delis\Downloads\UIKitTutorials-main\bin\Release\Galaxia Launcher.exe
+C:\Users\delis\Downloads\UIKitTutorials-main\bin\Release\Galaxia Launcher.pdb
+C:\Users\delis\Downloads\UIKitTutorials-main\obj\Release\Galaxia Launcher_MarkupCompile.cache
+C:\Users\delis\Downloads\UIKitTutorials-main\obj\Release\Galaxia Launcher_MarkupCompile.lref
+C:\Users\delis\Downloads\UIKitTutorials-main\obj\Release\Galaxia Launcher.g.resources
+C:\Users\delis\Downloads\UIKitTutorials-main\obj\Release\Galaxia Launcher.exe
+C:\Users\delis\Downloads\UIKitTutorials-main\obj\Release\Galaxia Launcher.pdb
+C:\Users\delis\Downloads\UIKitTutorials-main\bin\Release\Galaxia Launcher.exe.manifest
+C:\Users\delis\Downloads\UIKitTutorials-main\bin\Release\Galaxia Launcher.application
+C:\Users\delis\Downloads\UIKitTutorials-main\obj\Release\Galaxia Launcher.TrustInfo.xml
+C:\Users\delis\Downloads\UIKitTutorials-main\obj\Release\Galaxia Launcher.exe.manifest
+C:\Users\delis\Downloads\UIKitTutorials-main\obj\Release\Galaxia Launcher.application
+C:\Users\delis\Downloads\UIKitTutorials-main\obj\Release\roundedTextBox.baml
+C:\Users\samwa\Desktop\UIKitTutorials-main\bin\Release\Galaxia Launcher.exe.config
+C:\Users\samwa\Desktop\UIKitTutorials-main\bin\Release\Galaxia Launcher.exe.manifest
+C:\Users\samwa\Desktop\UIKitTutorials-main\bin\Release\Galaxia Launcher.application
+C:\Users\samwa\Desktop\UIKitTutorials-main\bin\Release\Galaxia Launcher.exe
+C:\Users\samwa\Desktop\UIKitTutorials-main\bin\Release\Galaxia Launcher.pdb
+C:\Users\samwa\Desktop\UIKitTutorials-main\obj\Release\UIKitTutorials.csproj.AssemblyReference.cache
+C:\Users\samwa\Desktop\UIKitTutorials-main\obj\Release\UIKitTutorials.csproj.SuggestedBindingRedirects.cache
+C:\Users\samwa\Desktop\UIKitTutorials-main\obj\Release\roundedTextBox.baml
+C:\Users\samwa\Desktop\UIKitTutorials-main\obj\Release\MainWindow.g.cs
+C:\Users\samwa\Desktop\UIKitTutorials-main\obj\Release\Pages\HomePage.g.cs
+C:\Users\samwa\Desktop\UIKitTutorials-main\obj\Release\Pages\NotesPage.g.cs
+C:\Users\samwa\Desktop\UIKitTutorials-main\obj\Release\Pages\PaymentPage.g.cs
+C:\Users\samwa\Desktop\UIKitTutorials-main\obj\Release\Pages\SoundsPage.g.cs
+C:\Users\samwa\Desktop\UIKitTutorials-main\obj\Release\App.g.cs
+C:\Users\samwa\Desktop\UIKitTutorials-main\obj\Release\Galaxia Launcher_MarkupCompile.cache
+C:\Users\samwa\Desktop\UIKitTutorials-main\obj\Release\Galaxia Launcher_MarkupCompile.lref
+C:\Users\samwa\Desktop\UIKitTutorials-main\obj\Release\App.baml
+C:\Users\samwa\Desktop\UIKitTutorials-main\obj\Release\Assets\Icons\Icons.baml
+C:\Users\samwa\Desktop\UIKitTutorials-main\obj\Release\MainWindow.baml
+C:\Users\samwa\Desktop\UIKitTutorials-main\obj\Release\Pages\HomePage.baml
+C:\Users\samwa\Desktop\UIKitTutorials-main\obj\Release\Pages\NotesPage.baml
+C:\Users\samwa\Desktop\UIKitTutorials-main\obj\Release\Pages\PaymentPage.baml
+C:\Users\samwa\Desktop\UIKitTutorials-main\obj\Release\Pages\SoundsPage.baml
+C:\Users\samwa\Desktop\UIKitTutorials-main\obj\Release\Styles\MainStyle.baml
+C:\Users\samwa\Desktop\UIKitTutorials-main\obj\Release\Themes\LightTheme.baml
+C:\Users\samwa\Desktop\UIKitTutorials-main\obj\Release\Galaxia Launcher.g.resources
+C:\Users\samwa\Desktop\UIKitTutorials-main\obj\Release\UIKitTutorials.Properties.Resources.resources
+C:\Users\samwa\Desktop\UIKitTutorials-main\obj\Release\UIKitTutorials.csproj.GenerateResource.cache
+C:\Users\samwa\Desktop\UIKitTutorials-main\obj\Release\UIKitTutorials.csproj.CoreCompileInputs.cache
+C:\Users\samwa\Desktop\UIKitTutorials-main\obj\Release\Galaxia Launcher.TrustInfo.xml
+C:\Users\samwa\Desktop\UIKitTutorials-main\obj\Release\Galaxia Launcher.exe.manifest
+C:\Users\samwa\Desktop\UIKitTutorials-main\obj\Release\Galaxia Launcher.application
+C:\Users\samwa\Desktop\UIKitTutorials-main\obj\Release\Galaxia Launcher.exe
+C:\Users\samwa\Desktop\UIKitTutorials-main\obj\Release\Galaxia Launcher.pdb
+C:\Users\samwa\Desktop\GalaxiaXreboot\bin\Release\Galaxia Launcher.exe.config
+C:\Users\samwa\Desktop\GalaxiaXreboot\bin\Release\Galaxia Launcher.exe.manifest
+C:\Users\samwa\Desktop\GalaxiaXreboot\bin\Release\Galaxia Launcher.application
+C:\Users\samwa\Desktop\GalaxiaXreboot\bin\Release\Galaxia Launcher.exe
+C:\Users\samwa\Desktop\GalaxiaXreboot\bin\Release\Galaxia Launcher.pdb
+C:\Users\samwa\Desktop\GalaxiaXreboot\obj\Release\UIKitTutorials.csproj.AssemblyReference.cache
+C:\Users\samwa\Desktop\GalaxiaXreboot\obj\Release\UIKitTutorials.csproj.SuggestedBindingRedirects.cache
+C:\Users\samwa\Desktop\GalaxiaXreboot\obj\Release\roundedTextBox.baml
+C:\Users\samwa\Desktop\GalaxiaXreboot\obj\Release\MainWindow.g.cs
+C:\Users\samwa\Desktop\GalaxiaXreboot\obj\Release\Pages\HomePage.g.cs
+C:\Users\samwa\Desktop\GalaxiaXreboot\obj\Release\Pages\NotesPage.g.cs
+C:\Users\samwa\Desktop\GalaxiaXreboot\obj\Release\Pages\PaymentPage.g.cs
+C:\Users\samwa\Desktop\GalaxiaXreboot\obj\Release\Pages\SoundsPage.g.cs
+C:\Users\samwa\Desktop\GalaxiaXreboot\obj\Release\App.g.cs
+C:\Users\samwa\Desktop\GalaxiaXreboot\obj\Release\Galaxia Launcher_MarkupCompile.cache
+C:\Users\samwa\Desktop\GalaxiaXreboot\obj\Release\Galaxia Launcher_MarkupCompile.lref
+C:\Users\samwa\Desktop\GalaxiaXreboot\obj\Release\App.baml
+C:\Users\samwa\Desktop\GalaxiaXreboot\obj\Release\Assets\Icons\Icons.baml
+C:\Users\samwa\Desktop\GalaxiaXreboot\obj\Release\MainWindow.baml
+C:\Users\samwa\Desktop\GalaxiaXreboot\obj\Release\Pages\HomePage.baml
+C:\Users\samwa\Desktop\GalaxiaXreboot\obj\Release\Pages\NotesPage.baml
+C:\Users\samwa\Desktop\GalaxiaXreboot\obj\Release\Pages\PaymentPage.baml
+C:\Users\samwa\Desktop\GalaxiaXreboot\obj\Release\Pages\SoundsPage.baml
+C:\Users\samwa\Desktop\GalaxiaXreboot\obj\Release\Styles\MainStyle.baml
+C:\Users\samwa\Desktop\GalaxiaXreboot\obj\Release\Themes\LightTheme.baml
+C:\Users\samwa\Desktop\GalaxiaXreboot\obj\Release\Galaxia Launcher.g.resources
+C:\Users\samwa\Desktop\GalaxiaXreboot\obj\Release\UIKitTutorials.Properties.Resources.resources
+C:\Users\samwa\Desktop\GalaxiaXreboot\obj\Release\UIKitTutorials.csproj.GenerateResource.cache
+C:\Users\samwa\Desktop\GalaxiaXreboot\obj\Release\UIKitTutorials.csproj.CoreCompileInputs.cache
+C:\Users\samwa\Desktop\GalaxiaXreboot\obj\Release\Galaxia Launcher.TrustInfo.xml
+C:\Users\samwa\Desktop\GalaxiaXreboot\obj\Release\Galaxia Launcher.exe.manifest
+C:\Users\samwa\Desktop\GalaxiaXreboot\obj\Release\Galaxia Launcher.application
+C:\Users\samwa\Desktop\GalaxiaXreboot\obj\Release\Galaxia Launcher.exe
+C:\Users\samwa\Desktop\GalaxiaXreboot\obj\Release\Galaxia Launcher.pdb
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\bin\Release\Galaxia Launcher.exe.config
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\bin\Release\Galaxia Launcher.exe.manifest
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\bin\Release\Galaxia Launcher.application
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\bin\Release\Galaxia Launcher.exe
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\bin\Release\Galaxia Launcher.pdb
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\obj\Release\UIKitTutorials.csproj.AssemblyReference.cache
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\obj\Release\UIKitTutorials.csproj.SuggestedBindingRedirects.cache
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\obj\Release\roundedTextBox.baml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\obj\Release\MainWindow.g.cs
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\obj\Release\Pages\HomePage.g.cs
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\obj\Release\Pages\NotesPage.g.cs
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\obj\Release\Pages\PaymentPage.g.cs
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\obj\Release\Pages\SoundsPage.g.cs
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\obj\Release\App.g.cs
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\obj\Release\Galaxia Launcher_MarkupCompile.cache
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\obj\Release\Galaxia Launcher_MarkupCompile.lref
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\obj\Release\App.baml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\obj\Release\Assets\Icons\Icons.baml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\obj\Release\MainWindow.baml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\obj\Release\Pages\HomePage.baml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\obj\Release\Pages\NotesPage.baml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\obj\Release\Pages\PaymentPage.baml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\obj\Release\Pages\SoundsPage.baml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\obj\Release\Styles\MainStyle.baml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\obj\Release\Themes\LightTheme.baml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\obj\Release\Galaxia Launcher.g.resources
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\obj\Release\UIKitTutorials.Properties.Resources.resources
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\obj\Release\UIKitTutorials.csproj.GenerateResource.cache
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\obj\Release\UIKitTutorials.csproj.CoreCompileInputs.cache
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\obj\Release\Galaxia Launcher.TrustInfo.xml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\obj\Release\Galaxia Launcher.exe.manifest
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\obj\Release\Galaxia Launcher.application
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\obj\Release\Galaxia Launcher.exe
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaXreboot\obj\Release\Galaxia Launcher.pdb
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\bin\Release\Galaxia Launcher.exe.config
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\bin\Release\Galaxia Launcher.exe.manifest
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\bin\Release\Galaxia Launcher.application
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\bin\Release\Galaxia Launcher.exe
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\bin\Release\Galaxia Launcher.pdb
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\UIKitTutorials.csproj.AssemblyReference.cache
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\UIKitTutorials.csproj.SuggestedBindingRedirects.cache
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\roundedTextBox.baml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\MainWindow.g.cs
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\Pages\HomePage.g.cs
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\Pages\NotesPage.g.cs
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\Pages\PaymentPage.g.cs
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\Pages\SoundsPage.g.cs
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\App.g.cs
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\Galaxia Launcher_MarkupCompile.cache
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\Galaxia Launcher_MarkupCompile.lref
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\App.baml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\Assets\Icons\Icons.baml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\MainWindow.baml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\Pages\HomePage.baml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\Pages\NotesPage.baml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\Pages\PaymentPage.baml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\Pages\SoundsPage.baml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\Styles\MainStyle.baml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\Themes\LightTheme.baml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\Galaxia Launcher.g.resources
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\UIKitTutorials.Properties.Resources.resources
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\UIKitTutorials.csproj.GenerateResource.cache
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\UIKitTutorials.csproj.CoreCompileInputs.cache
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\Galaxia Launcher.TrustInfo.xml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\Galaxia Launcher.exe.manifest
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\Galaxia Launcher.application
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\Galaxia Launcher.exe
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\Galaxia Launcher.pdb
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\bin\Release\MaterialDesignColors.dll
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\bin\Release\MaterialDesignThemes.Wpf.dll
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\bin\Release\MySqlConnector.dll
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\bin\Release\System.Buffers.dll
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\bin\Release\System.Memory.dll
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\bin\Release\System.Numerics.Vectors.dll
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\bin\Release\System.Threading.Tasks.Extensions.dll
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\bin\Release\MaterialDesignColors.pdb
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\bin\Release\MaterialDesignThemes.Wpf.pdb
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\bin\Release\MaterialDesignThemes.Wpf.xml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\bin\Release\MySqlConnector.xml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\bin\Release\System.Buffers.xml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\bin\Release\System.Memory.xml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\bin\Release\System.Numerics.Vectors.xml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\bin\Release\System.Threading.Tasks.Extensions.xml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\Pages\Login.g.cs
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\Pages\Login.baml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\UIKitTutorials.csproj.CopyComplete
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\Pages\SplashScreen.g.cs
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\Pages\SplashScreen.baml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\Pages\Menu.g.cs
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\Pages\Menu.baml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\UIKitTutorials.Pages.Download.resources
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\bin\Release\DiscordRPC.dll
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\bin\Release\Newtonsoft.Json.dll
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\bin\Release\DiscordRPC.pdb
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\bin\Release\DiscordRPC.xml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\bin\Release\Newtonsoft.Json.xml
+C:\Users\samwa\Desktop\VS-VS CODE\GalaxiaLauncher\obj\Release\UIKitTutorials.Pages.inj.resources
